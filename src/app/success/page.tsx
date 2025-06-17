@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
 const KAKAO_PAY_HOST = 'https://kapi.kakao.com/v1/payment';
 const KAKAO_ADMIN_KEY = process.env.NEXT_PUBLIC_KAKAO_ADMIN_KEY || '';
 
-export default function SuccessPage() {
+function PaymentSuccess() {
   const searchParams = useSearchParams();
   const [paymentInfo, setPaymentInfo] = useState({
     orderId: '',
@@ -79,5 +79,13 @@ export default function SuccessPage() {
         </a>
       </div>
     </div>
+  );
+}
+
+export default function SuccessPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PaymentSuccess />
+    </Suspense>
   );
 } 
