@@ -6,6 +6,19 @@ const nextConfig = {
   output: 'standalone',
   images: {
     unoptimized: true,
+  },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*'
+          }
+        ]
+      }
+    ]
   }
 }
 
