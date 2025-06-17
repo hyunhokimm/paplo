@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: 'Paplo - 환경을 생각하는 패키징',
-  description: '덜어내 줄이고, 더해서 가치를 만듭니다.',
+  description: '덜어내 줄이고, 더해서 가치를 만듭니다. 친환경 패키징으로 더 나은 미래를 만듭니다.',
 };
 
 export default function RootLayout({
