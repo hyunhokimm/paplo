@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Paplo - 덜어낸 종이, 더해진 가치",
-  description: "친환경 종이 캐리어 구조 자체가 기술입니다. 기존 구조 대비 종이 사용량 1/3, 무게 1/6, 접착제 미사용으로 재활용이 쉽습니다.",
+export const metadata = {
+  title: 'Paplo - 환경을 생각하는 패키징',
+  description: '덜어내 줄이고, 더해서 가치를 만듭니다.',
 };
 
 export default function RootLayout({
