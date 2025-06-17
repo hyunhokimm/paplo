@@ -36,6 +36,8 @@ export default function Home() {
                 Thank you.
               </p>
             </div>
+
+        
           </div>
         </div>
       </section>
@@ -684,22 +686,49 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6">
               {/* 카카오페이 후원 (국내) */}
               <div className="text-center">
-                <h4 className="font-semibold text-gray-800 mb-2">국내 후원 / Domestic</h4>
-                <a 
-                  href="https://qr.kakaopay.com/Ej8Kc9t8u" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition-all shadow-lg hover:shadow-yellow-500/30 text-lg font-semibold transform hover:scale-105"
-                >
-                  <span className="mr-2">💳</span>
-                  카카오페이로 후원하기
-                </a>
-                <p className="text-gray-500 mt-2 text-sm">* 카카오페이로 간편하게 후원</p>
+                <h4 className="font-semibold text-gray-800 mb-4">국내 후원 / Domestic</h4>
+                <div className="space-y-4">
+                  <div className="flex flex-col items-center gap-2">
+                    <a 
+                      href="https://qr.kakaopay.com/FNjGshihw" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-6 py-3 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition-all shadow-lg hover:shadow-yellow-500/30 text-lg font-semibold transform hover:scale-105"
+                    >
+                      <span className="mr-2">💳</span>
+                      카카오페이로 후원하기
+                    </a>
+                    <div className="text-sm text-yellow-600 bg-yellow-50 px-4 py-2 rounded-lg">
+                      <span className="mr-2">📱</span>
+                      모바일에서만 후원이 가능합니다
+                      <br />
+                      <span className="text-xs text-gray-500">Mobile device required for KakaoPay donation</span>
+                    </div>
+                  </div>
+                  <div className="flex justify-center mt-4">
+                    <div className="bg-white p-4 rounded-xl shadow-sm">
+                      <div className="text-sm text-gray-600 mb-2">
+                        <span className="font-medium">모바일로 QR 코드를 스캔하세요</span>
+                        <br />
+                        <span className="text-xs text-gray-500">Scan QR code with your mobile device</span>
+                      </div>
+                      <Image 
+                        src="/kakao.png" 
+                        alt="카카오페이 QR 코드" 
+                        width={180} 
+                        height={180} 
+                        className="mx-auto"
+                        priority
+                      />
+                      <div className="text-xs text-gray-500 mt-2">https://qr.kakaopay.com/FNjGshihw</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Buy Me a Coffee 후원 (해외) */}
               <div className="text-center">
-                <h4 className="font-semibold text-gray-800 mb-2">해외 후원 / International</h4>
+                <h4 className="font-semibold text-gray-800 mb-4">해외 후원 / International</h4>
                 <div className="space-y-4">
                   <a 
                     href="https://coff.ee/whoaukim" 
