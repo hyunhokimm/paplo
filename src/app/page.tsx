@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SuggestionForm from './components/SuggestionForm';
 
 export default function Home() {
   return (
@@ -23,14 +24,14 @@ export default function Home() {
             </div>
             
             {/* 메시지 카드 */}
-            <div className="max-w-2xl mx-auto bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-gray-100">
+            <div className="max-w-2xl mx-auto  backdrop-blur-sm rounded-3xl p-8  ">
               <p className="text-lg text-gray-800 leading-relaxed mb-6">
                 안녕하세요. 한국에 사는 김현호입니다.<br/>
                 저의 작은 노력이 이 사회에 도움이 되길 기원합니다.<br/>
                 감사합니다.
               </p>
-              <div className="w-12 h-px bg-gray-200 mx-auto mb-6"></div>
-              <p className="text-gray-600 leading-relaxed">
+              <div className="w-24 h-px bg-gradient-to-r from-purple-200 to-blue-200 mx-auto mb-6"></div>
+              <p className="text-gray-700 leading-relaxed">
                 Hello, I'm Hyunho Kim from South Korea.<br/>
                 I hope this small effort can contribute meaningfully to society.<br/>
                 Thank you.
@@ -707,11 +708,7 @@ export default function Home() {
                   </div>
                   <div className="flex justify-center mt-4">
                     <div className="bg-white p-4 rounded-xl shadow-sm">
-                      <div className="text-sm text-gray-600 mb-2">
-                        <span className="font-medium">모바일로 QR 코드를 스캔하세요</span>
-                        <br />
-                        <span className="text-xs text-gray-500">Scan QR code with your mobile device</span>
-                      </div>
+                   
                       <Image 
                         src="/kakao.png" 
                         alt="카카오페이 QR 코드" 
@@ -719,6 +716,7 @@ export default function Home() {
                         height={180} 
                         className="mx-auto"
                         priority
+                        style={{ width: 'auto', height: 'auto' }}
                       />
                       <div className="text-xs text-gray-500 mt-2">https://qr.kakaopay.com/FNjGshihw</div>
                     </div>
@@ -905,10 +903,11 @@ export default function Home() {
                       SK
                     </div>
                     <div className="ml-4">
-                      <h4 className="font-semibold">서울 카페 A</h4>
-                      <p className="text-gray-600 text-sm">Seoul Cafe A</p>
+                      <h4 className="font-semibold text-gray-900">서울 카페 A</h4>
+                      <p className="text-gray-700 text-sm">Seoul Cafe A</p>
                     </div>
                   </div>
+                  <p className="text-gray-900 mb-2">"종이 캐리어 도입 후 고객 만족도가 크게 향상되었습니다. 특히 환경 보호에 동참한다는 점에서 긍정적인 피드백이 많습니다."</p>
                   <p className="text-gray-700">"종이 캐리어 도입 후 고객 만족도가 크게 향상되었습니다. 특히 환경 보호에 동참한다는 점에서 긍정적인 피드백이 많습니다."</p>
                   <p className="text-gray-500 mt-2">"Customer satisfaction greatly improved after introducing paper carriers. We receive lots of positive feedback about participating in environmental protection."</p>
                 </div>
@@ -922,12 +921,12 @@ export default function Home() {
                       BK
                     </div>
                     <div className="ml-4">
-                      <h4 className="font-semibold">베이커리 B</h4>
-                      <p className="text-gray-600 text-sm">Bakery B</p>
+                      <h4 className="font-semibold text-gray-900">베이커리 B</h4>
+                      <p className="text-gray-700 text-sm">Bakery B</p>
                     </div>
                   </div>
-                  <p className="text-gray-700">"기존 비닐 손잡이보다 튼튼하고, 브랜드 이미지도 높일 수 있어서 매우 만족스럽습니다."</p>
-                  <p className="text-gray-500 mt-2">"Very satisfied as it's stronger than traditional plastic handles and helps enhance our brand image."</p>
+                  <p className="text-gray-900 mb-2">"기존 비닐 손잡이보다 튼튼하고, 브랜드 이미지도 높일 수 있어서 매우 만족스럽습니다."</p>
+                  <p className="text-gray-800">"Very satisfied as it's stronger than traditional plastic handles and helps enhance our brand image."</p>
                 </div>
               </div>
             </div>
@@ -937,42 +936,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 개선 제안 / Improvement Suggestions
               </h3>
-              
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-3xl border border-white/50 shadow-lg group-hover:shadow-purple-500/20 transition-all duration-500">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <span className="text-2xl">📏</span>
-                  </div>
-                  <h4 className="font-semibold text-purple-800 mb-3">사이즈 다양화 / Size Variations</h4>
-                  <p className="text-gray-700">다양한 크기의 제품을 위한 새로운 사이즈 추가 예정</p>
-                  <p className="text-gray-500 mt-2">New sizes for various products coming soon</p>
-                  <div className="mt-4 flex items-center">
-                    <div className="h-2 flex-1 bg-purple-200 rounded-full">
-                      <div className="h-2 w-3/4 bg-purple-600 rounded-full"></div>
-                    </div>
-                    <span className="ml-4 text-sm text-purple-600 font-semibold">75%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-3xl border border-white/50 shadow-lg group-hover:shadow-purple-500/20 transition-all duration-500">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <span className="text-2xl">💧</span>
-                  </div>
-                  <h4 className="font-semibold text-purple-800 mb-3">방수 코팅 / Water Resistance</h4>
-                  <p className="text-gray-700">친환경 방수 코팅 옵션 개발 중</p>
-                  <p className="text-gray-500 mt-2">Eco-friendly water-resistant coating in development</p>
-                  <div className="mt-4 flex items-center">
-                    <div className="h-2 flex-1 bg-purple-200 rounded-full">
-                      <div className="h-2 w-1/2 bg-purple-600 rounded-full"></div>
-                    </div>
-                    <span className="ml-4 text-sm text-purple-600 font-semibold">50%</span>
-                  </div>
-                </div>
-              </div>
+              <SuggestionForm />
             </div>
           </div>
         </div>
