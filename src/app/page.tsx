@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center section">
+      <section className="relative min-h-screen flex items-center section ">
         {/* Background Effects - 더 부드럽게 수정 */}
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50"></div>
         
@@ -92,14 +92,14 @@ export default function Home() {
             {/* Message Card - 미니멀하게 수정 */}
             <div className="card p-10 backdrop-blur-sm">
               <div className="space-y-6 text-center">
-                <p className="text-lg text-gray-800 leading-relaxed">
+                <p className="text-lg text-gray-800 ">
                   안녕하세요. 한국에 사는 김현호입니다.<br/>
                   저의 작은 노력이 이 사회에 도움이 되길 기원합니다.<br/>
                   현재 이 디자인은 무료로 사용 가능합니다.<br/>
                   주의 사항은 아래 내용을 참고해주세요.
                 </p>
                 <div className="w-32 h-px bg-indigo-100 mx-auto"></div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed [word-break:keep-all]">
                   Hello, I'm Hyunho Kim from South Korea.<br/>
                   I hope this small effort can contribute meaningfully to society.<br/>
                   This design is free to use.<br/>

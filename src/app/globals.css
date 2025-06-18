@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 전역 스타일 적용 */
+@layer base {
+  html {
+    word-break: keep-all;
+  }
+}
+
 :root {
   --primary: #4F46E5;
   --secondary: #818CF8;
