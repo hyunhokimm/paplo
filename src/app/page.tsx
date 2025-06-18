@@ -257,14 +257,18 @@ export default function Home() {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-indigo-600 mb-2">1,000장</div>
                   <div className="text-gray-600">사용 시</div>
+                  <div className="text-gray-400">Usage</div>
+
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-indigo-600 mb-2">1그루</div>
                   <div className="text-gray-600">나무 절감</div>
+                  <div className="text-gray-400">Tree Savings</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-indigo-600 mb-2">300kg</div>
                   <div className="text-gray-600">연간 CO2 절감</div>
+                  <div className="text-gray-400">Annual CO2 Savings</div>
                 </div>
               </div>
               <p className="text-lg text-center text-gray-700 bg-indigo-50 p-4 rounded-xl">
@@ -324,6 +328,10 @@ export default function Home() {
                 <p className="text-lg text-gray-700">
                   종이 캐리어의 구조를 바꿔 종이를 확실히 줄일 수 있다는 희망을 발견.
                   그 작은 발견이 Paplo의 시작이 되었습니다.
+                </p>
+                <p className="text-lg text-gray-700">
+                  The idea of reducing paper usage by changing the structure of the paper carrier.
+                  The small discovery became the beginning of Paplo.
                 </p>
                 <div className="bg-indigo-50 p-6 rounded-xl">
                   <p className="font-semibold text-indigo-600 mb-4 text-lg">혁신의 핵심</p>
@@ -1059,12 +1067,12 @@ export default function Home() {
                       {/* Report Button */}
                       <a 
                         href="mailto:whoaukim@gmail.com?subject=[신고] Paplo 디자인 무단 도용 신고"
-                        className="flex items-center space-x-3 text-gray-700 hover:text-red-600 transition-colors"
+                        className="flex items-center space-x-3 text-red-600 hover:text-red-700 transition-colors group"
                       >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
-                        <span>디자인 도용 신고 / Report Design Infringement</span>
+                        <span className="font-medium">디자인 도용 신고 / Report Design Infringement</span>
                       </a>
                     </div>
 
@@ -1078,7 +1086,7 @@ export default function Home() {
                     </h3>
                     <div className="space-y-4">
                       <a 
-                        href="https://qr.kakaopay.com/FWxWc9jVK" 
+                        href="https://qr.kakaopay.com/FNjGshihw" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center space-x-3 px-6 py-3 bg-[#FFE812] text-black rounded-lg hover:bg-[#FFE000] transition-all shadow-sm hover:shadow-md text-base font-medium"
