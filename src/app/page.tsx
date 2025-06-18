@@ -91,7 +91,7 @@ export default function Home() {
 
             {/* Message Card - 미니멀하게 수정 */}
             <div className="card p-10 backdrop-blur-sm">
-              <div className="space-y-6">
+              <div className="space-y-6 text-center">
                 <p className="text-lg text-gray-800 leading-relaxed">
                   안녕하세요. 한국에 사는 김현호입니다.<br/>
                   저의 작은 노력이 이 사회에 도움이 되길 기원합니다.<br/>
@@ -109,12 +109,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Scroll Indicator - 심플하게 수정 */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 flex flex-col items-center animate-bounce opacity-50">
-              <span className="text-gray-500 mb-2">Scroll Down</span>
-              <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+            {/* Scroll Down Arrow - 여백 추가 */}
+            <div className="mt-12 mb-8 flex justify-center">
+              <div className="animate-bounce">
+                <svg
+                  className="w-6 h-6 text-indigo-500"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
