@@ -44,3 +44,6 @@ next-env.d.ts
 paplo-463209-b438533418d2.json
 
 .vercel
+
+# Local Netlify folder
+.netlify
