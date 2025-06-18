@@ -513,7 +513,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex flex-col items-center gap-2">
                     <a 
-                      href="https://qr.kakaopay.com/FWxWc9jVK" 
+                      href="https://qr.kakaopay.com/FNjGshihw" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 px-6 py-3 bg-[#FFE812] text-black rounded-lg hover:bg-[#FFE000] transition-all shadow-sm hover:shadow-md text-base font-medium"
