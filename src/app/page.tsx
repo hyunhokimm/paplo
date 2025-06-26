@@ -588,7 +588,7 @@ export default function Home() {
                   <div className="flex justify-center mt-4">
                     <div className="bg-white p-4 rounded-xl shadow-sm">
                       <Image 
-                        src="/kakao.png" 
+                        src="/kakaoQR.png" 
                         alt="카카오페이 QR 코드" 
                         width={160} 
                         height={160} 
