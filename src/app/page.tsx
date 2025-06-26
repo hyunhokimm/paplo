@@ -676,11 +676,11 @@ export default function Home() {
             <p className="text-xl text-gray-500">Flexible License Options for Various Uses</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full max-w-screen-lg mx-auto">
             {/* Free Version Card */}
             <div className="relative group transform transition-all duration-500 hover:-translate-y-2">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-white/50 shadow-xl">
+              <div className="relative bg-white/80 backdrop-blur-sm p-4 md:p-8 rounded-2xl border border-white/50 shadow-xl">
                 <div className="flex items-center justify-between mb-8">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
