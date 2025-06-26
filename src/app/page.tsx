@@ -93,17 +93,18 @@ export default function Home() {
             <div className="card p-10 backdrop-blur-sm">
               <div className="space-y-6 text-center">
                 <p className="text-lg text-gray-800 ">
-                  안녕하세요. 한국에 사는 김현호입니다.<br/>
-                  저의 작은 노력이 이 사회에 도움이 되길 기원합니다.<br/>
+                  안녕하세요! 한국에서 만든 친환경 포장 솔루션 Paplo의 김현호입니다.<br/>
+                  저희가 만든 작은 혁신을 여러분과 함께 나누고 싶습니다.<br/>
                   현재 이 디자인은 무료로 사용 가능합니다.<br/>
-                  주의 사항은 아래 내용을 참고해주세요.
+                  자세한 내용은 아래를 참고해주세요.<br/>
+                  감사합니다.
                 </p>
                 <div className="w-32 h-px bg-indigo-100 mx-auto"></div>
                 <p className="text-gray-600 leading-relaxed [word-break:keep-all]">
-                  Hello, I'm Hyunho Kim from South Korea.<br/>
-                  I hope this small effort can contribute meaningfully to society.<br/>
+                  Hello! I'm Hyunho Kim from Paplo, an eco-friendly packaging solution made in South Korea.<br/>
+                  We'd like to share our small innovation with you.<br/>
                   This design is free to use.<br/>
-                  Please refer to the following points.<br/>
+                  Please refer to the details below.<br/>
                   Thank you.
                 </p>
               </div>
