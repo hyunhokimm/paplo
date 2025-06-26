@@ -161,40 +161,57 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Weight & Volume */}
             <div className="card p-8">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="icon-box">
+                <svg className="w-8 h-8 text-paplo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-indigo-600 mb-2">무게 1/3</h3>
-                  <p className="text-gray-600">Weight Reduced by 2/3</p>
+                  <h3 className="heading-3">무게 1/3</h3>
+                  <p className="body-light">Weight Reduced by 2/3</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-indigo-600 mb-2">부피 1/3</h3>
-                  <p className="text-gray-600">Volume Reduced by 2/3</p>
-                </div>
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="text-gray-700">기존 대비 종이 사용량을 획기적으로 줄인 혁신적 구조</p>
-                  <p className="text-gray-500 text-sm mt-1">Innovative structure that dramatically reduces paper usage</p>
+                  <h3 className="heading-3">부피 1/3</h3>
+                  <p className="body-light">Volume Reduced by 2/3</p>
                 </div>
               </div>
             </div>
 
+            {/* Innovation Core */}
+            <div className="highlight-box">
+              <p className="heading-3 !mb-4">혁신의 핵심</p>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl flex-shrink-0">💡</span>
+                  <div>
+                    <p className="body">접착제 사용 없이도 용기에 손쉽게 결합되는 방식</p>
+                    <p className="body-light text-sm">Easy assembly without adhesives</p>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-4">
+                  <span className="text-2xl flex-shrink-0">🌱</span>
+                  <div>
+                    <p className="body">환경 보호 차원의 가치 창출</p>
+                    <p className="body-light text-sm">Creating value for environmental protection</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
             {/* Eco-friendly */}
             <div className="card p-8">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">🌱</span>
+              <div className="icon-box">
+                <span className="text-2xl">🌱</span>
               </div>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-indigo-600 mb-2">친환경</h3>
-                  <p className="text-gray-600">접착제가 필요 없는 구조로 재활용이 용이합니다.</p>
+                  <h3 className="heading-3">친환경</h3>
+                  <p className="body-light">접착제가 필요 없는 구조로 재활용이 용이합니다.</p>
                   <p className="text-gray-500 text-sm mt-1">Easy to recycle with no glue required structure</p>
                 </div>
                 <div className="pt-4 border-t border-gray-100">
-                  <div className="flex items-center text-indigo-600">
+                  <div className="flex items-center text-paplo">
                     <span className="text-2xl font-bold mr-2">100%</span>
                     <span className="font-semibold">재활용 가능</span>
                     <span className="text-sm ml-2 text-gray-500">(Recyclable)</span>
@@ -205,17 +222,17 @@ export default function Home() {
 
             {/* Expandable */}
             <div className="card p-8">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">📦</span>
+              <div className="icon-box">
+                <span className="text-2xl">📦</span>
               </div>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-indigo-600 mb-2">확장성</h3>
-                  <p className="text-gray-600">측면 연결 구조로 최대 4개까지 안전하게 연결 가능</p>
+                  <h3 className="heading-3">확장성</h3>
+                  <p className="body-light">측면 연결 구조로 최대 4개까지 안전하게 연결 가능</p>
                   <p className="text-gray-500 text-sm mt-1">Safe connection up to 4 units with side connection structure</p>
                 </div>
                 <div className="pt-4 border-t border-gray-100">
-                  <div className="flex items-center text-indigo-600">
+                  <div className="flex items-center text-paplo">
                     <span className="text-2xl font-bold mr-2">4x</span>
                     <span className="font-semibold">확장 가능</span>
                     <span className="text-sm ml-2 text-gray-500">(Expandable)</span>
@@ -267,30 +284,30 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Paper Reduction */}
             <div className="card p-8 text-center">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">📊</span>
+              <div className="icon-box mx-auto">
+                <span className="text-2xl">📊</span>
               </div>
-              <div className="text-5xl font-bold text-indigo-600 mb-4">67%</div>
+              <div className="text-5xl font-bold text-paplo mb-4">67%</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">종이 사용량 절감</h3>
               <p className="text-gray-600">Paper Usage Reduction</p>
             </div>
 
             {/* CO2 Reduction */}
             <div className="card p-8 text-center">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">🌱</span>
+              <div className="icon-box mx-auto">
+                <span className="text-2xl">🌱</span>
               </div>
-              <div className="text-5xl font-bold text-indigo-600 mb-4">25kg</div>
+              <div className="text-5xl font-bold text-paplo mb-4">25kg</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">CO2 배출 감소 / 월</h3>
               <p className="text-gray-600">CO2 Reduction / Month</p>
             </div>
 
             {/* Recyclability */}
             <div className="card p-8 text-center">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">♻️</span>
+              <div className="icon-box mx-auto">
+                <span className="text-2xl">♻️</span>
               </div>
-              <div className="text-5xl font-bold text-indigo-600 mb-4">100%</div>
+              <div className="text-5xl font-bold text-paplo mb-4">100%</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">재활용 가능</h3>
               <p className="text-gray-600">Recyclable</p>
             </div>
@@ -299,31 +316,31 @@ export default function Home() {
           {/* Annual Impact */}
           <div className="max-w-4xl mx-auto">
             <div className="card p-10">
-              <div className="w-16 h-16 bg-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl text-white">🌳</span>
+              <div className="icon-box mx-auto">
+                <span className="text-2xl">🌳</span>
               </div>
-              <h3 className="text-3xl font-bold text-center text-indigo-600 mb-8">
+              <h3 className="text-3xl font-bold text-center text-paplo mb-8">
                 연간 환경 기여 효과
               </h3>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-600 mb-2">1,000장</div>
+                  <div className="text-3xl font-bold text-paplo mb-2">1,000장</div>
                   <div className="text-gray-600">사용 시</div>
                   <div className="text-gray-400">Usage</div>
 
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-600 mb-2">1그루</div>
+                  <div className="text-3xl font-bold text-paplo mb-2">1그루</div>
                   <div className="text-gray-600">나무 절감</div>
                   <div className="text-gray-400">Tree Savings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-indigo-600 mb-2">300kg</div>
+                  <div className="text-3xl font-bold text-paplo mb-2">300kg</div>
                   <div className="text-gray-600">연간 CO2 절감</div>
                   <div className="text-gray-400">Annual CO2 Savings</div>
                 </div>
               </div>
-              <p className="text-lg text-center text-gray-700 bg-indigo-50 p-4 rounded-xl">
+              <p className="text-lg text-center text-white bg-paplo/90 p-4 rounded-xl">
                 Paper savings + No glue + Smaller volume = Better sustainability
               </p>
             </div>
@@ -345,10 +362,10 @@ export default function Home() {
           <div className="space-y-8 max-w-4xl mx-auto">
             {/* Problem Recognition */}
             <div className="card p-8">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">💡</span>
+              <div className="icon-box">
+                <span className="text-2xl">💡</span>
               </div>
-              <h3 className="text-2xl font-bold text-indigo-600 mb-6">
+              <h3 className="text-2xl font-bold text-paplo mb-6">
                 문제 인식
               </h3>
               <div className="space-y-6">
@@ -359,7 +376,7 @@ export default function Home() {
                   The issue of excessive packaging experienced during 10 years of running a takeout café.
                 </p>
 
-                <div className="bg-indigo-50 p-6 rounded-xl">
+                <div className="border-2 border-paplo rounded-xl p-6">
                   <p className="italic text-gray-700 mb-2">"이 정도까지 종이를 써야 할까?"</p>
                   <p className="italic text-gray-500 text-sm">"Do we really need to use this much paper?"</p>
                   <p className="italic text-gray-700 mt-4 mb-2">"종이를 덜 쓰는 구조는 없을까?"</p>
@@ -370,10 +387,10 @@ export default function Home() {
 
             {/* Solution */}
             <div className="card p-8">
-              <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-2xl text-white">✨</span>
+              <div className="icon-box">
+                <span className="text-2xl">✨</span>
               </div>
-              <h3 className="text-2xl font-bold text-indigo-600 mb-6">
+              <h3 className="text-2xl font-bold text-paplo mb-6">
                 구조적 해답
               </h3>
               <div className="space-y-6">
@@ -385,21 +402,21 @@ export default function Home() {
                   The idea of reducing paper usage by changing the structure of the paper carrier.
                   The small discovery became the beginning of Paplo.
                 </p>
-                <div className="bg-indigo-50 p-6 rounded-xl">
-                  <p className="font-semibold text-indigo-600 mb-4 text-lg">혁신의 핵심</p>
-                  <ul className="space-y-4">
+                <div className="border-2 border-paplo rounded-xl p-6">
+                  <p className="font-semibold text-paplo mb-4 text-lg">혁신의 핵심</p>
+                  <ul className="space-y-4 text-gray-700">
                     <li className="flex items-center space-x-4">
                       <span className="text-2xl flex-shrink-0">💡</span>
                       <div>
-                        <p className="text-gray-700">핵심: 기존 종이컵 홀더에 손잡이만 결합하는 방식</p>
-                        <p className="text-sm text-gray-500">Core: Method of combining handles with existing cup holders</p>
+                        <p>접착제 사용 없이도 용기에 손쉽게 결합되는 방식</p>
+                        <p className="text-sm text-gray-500">Easy assembly without adhesives</p>
                       </div>
                     </li>
                     <li className="flex items-center space-x-4">
                       <span className="text-2xl flex-shrink-0">🌱</span>
                       <div>
-                        <p className="text-gray-700">결과: 구조 자체가 기술이 되다</p>
-                        <p className="text-sm text-gray-500">Result: Structure itself becomes technology</p>
+                        <p>환경 보호 차원의 가치 창출</p>
+                        <p className="text-sm text-gray-500">Creating value for environmental protection</p>
                       </div>
                     </li>
                   </ul>
@@ -889,15 +906,15 @@ export default function Home() {
                   <div className="space-y-6">
                     <div className="card p-8">
                       <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-white font-bold">F</span>
+                        <div className="icon-box-sm">
+                          <span className="text-xl">F</span>
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
                             <h3 className="font-bold text-gray-900">김지수</h3>
                             <span className="text-gray-500">카페 운영자</span>
                           </div>
-                          <div className="pl-4 border-l-2 border-indigo-100 space-y-2">
+                          <div className="pl-4 border-l-2 border-paplo space-y-2">
                             <p className="text-gray-700">"처음에는 반신반의했는데, 실제로 사용해보니 정말 효과가 있더라구요. 손님들의 반응도 좋고, 쓰레기도 확실히 줄었어요."</p>
                             <p className="text-gray-500 text-sm">"I was skeptical at first, but it really works! Customers love it, and we've definitely reduced our waste."</p>
                           </div>
@@ -907,15 +924,15 @@ export default function Home() {
 
                     <div className="card p-8">
                       <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-white font-bold">F</span>
+                        <div className="icon-box-sm">
+                          <span className="text-xl">F</span>
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
                             <h3 className="font-bold text-gray-900">John Smith</h3>
                             <span className="text-gray-500">Environmental Activist</span>
                           </div>
-                          <div className="pl-4 border-l-2 border-indigo-100 space-y-2">
+                          <div className="pl-4 border-l-2 border-paplo space-y-2">
                             <p className="text-gray-700">"혁신적인 디자인과 환경 보호를 동시에 실현한 훌륭한 제품입니다."</p>
                             <p className="text-gray-500 text-sm">"An excellent product that achieves both innovative design and environmental protection."</p>
                           </div>
@@ -930,15 +947,15 @@ export default function Home() {
                   <div className="space-y-6">
                     <div className="card p-8">
                       <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-white font-bold">F</span>
+                        <div className="icon-box-sm">
+                          <span className="text-xl">F</span>
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
                             <h3 className="font-bold text-gray-900">Sarah Johnson</h3>
                             <span className="text-gray-500">Cafe Chain Owner</span>
                           </div>
-                          <div className="pl-4 border-l-2 border-indigo-100 space-y-2">
+                          <div className="pl-4 border-l-2 border-paplo space-y-2">
                             <p className="text-gray-700">"여러 매장에 도입한 후, 운영 비용이 눈에 띄게 감소했습니다. 직원들의 만족도도 높아요."</p>
                             <p className="text-gray-500 text-sm">"After implementing it in multiple stores, we've seen a noticeable decrease in operating costs. Staff satisfaction has improved too."</p>
                           </div>
@@ -948,15 +965,15 @@ export default function Home() {
 
                     <div className="card p-8">
                       <div className="flex items-start space-x-4">
-                        <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <span className="text-white font-bold">F</span>
+                        <div className="icon-box-sm">
+                          <span className="text-xl">F</span>
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
                             <h3 className="font-bold text-gray-900">박민준</h3>
                             <span className="text-gray-500">디자이너</span>
                           </div>
-                          <div className="pl-4 border-l-2 border-indigo-100 space-y-2">
+                          <div className="pl-4 border-l-2 border-paplo space-y-2">
                             <p className="text-gray-700">"심플하면서도 효과적인 디자인이 정말 마음에 듭니다. 실용성과 미적인 부분을 잘 살린 것 같아요."</p>
                             <p className="text-gray-500 text-sm">"I love the simple yet effective design. It balances practicality and aesthetics really well."</p>
                           </div>
@@ -973,7 +990,7 @@ export default function Home() {
                   <button
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      currentFeedbackSlide === index ? 'bg-indigo-600 w-4' : 'bg-gray-300'
+                      currentFeedbackSlide === index ? 'bg-paplo w-4' : 'bg-gray-300'
                     }`}
                     onClick={() => setCurrentFeedbackSlide(index)}
                   ></button>
@@ -983,7 +1000,7 @@ export default function Home() {
 
             {/* Suggestion Form */}
             <div className="card p-8">
-              <h3 className="text-2xl font-bold text-indigo-600 mb-6">개선 제안</h3>
+              <h3 className="text-2xl font-bold text-paplo mb-6">개선 제안</h3>
               <p className="text-gray-600 mb-8">
                 Paplo를 더 좋게 만들어주세요<br/>
                 <span className="text-gray-500">Help us improve Paplo</span>
@@ -1017,13 +1034,13 @@ export default function Home() {
                     {faqData.slice(0, 5).map((faq, index) => (
                       <div key={index} className="card p-8">
                         <div className="flex items-start space-x-4">
-                          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold">Q</span>
+                          <div className="icon-box-sm">
+                            <span className="text-xl">Q</span>
                           </div>
                           <div className="flex-1">
                             <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                             <p className="text-gray-600 mb-4">{faq.answer}</p>
-                            <div className="pl-4 border-l-2 border-indigo-100 space-y-2">
+                            <div className="pl-4 border-l-2 border-paplo space-y-2">
                               <p className="text-gray-700">{faq.detail}</p>
                               <p className="text-gray-500 text-sm">{faq.additionalInfo}</p>
                             </div>
@@ -1040,13 +1057,13 @@ export default function Home() {
                     {faqData.slice(5).map((faq, index) => (
                       <div key={index} className="card p-8">
                         <div className="flex items-start space-x-4">
-                          <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <span className="text-white font-bold">Q</span>
+                          <div className="icon-box-sm">
+                            <span className="text-xl">Q</span>
                           </div>
                           <div className="flex-1">
                             <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                             <p className="text-gray-600 mb-4">{faq.answer}</p>
-                            <div className="pl-4 border-l-2 border-indigo-100 space-y-2">
+                            <div className="pl-4 border-l-2 border-paplo space-y-2">
                               <p className="text-gray-700">{faq.detail}</p>
                               <p className="text-gray-500 text-sm">{faq.additionalInfo}</p>
                             </div>
@@ -1064,7 +1081,7 @@ export default function Home() {
                   <button
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      currentFaqSlide === index ? 'bg-indigo-600 w-4' : 'bg-gray-300'
+                      currentFaqSlide === index ? 'bg-paplo w-4' : 'bg-gray-300'
                     }`}
                     onClick={() => setCurrentFaqSlide(index)}
                   ></button>
