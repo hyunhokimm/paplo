@@ -833,14 +833,14 @@ export default function Home() {
                  </div>
 
                  <a 
-                   href="mailto:whoaukim@gmail.com?subject=Paplo 유료 라이센스 문의" 
+                   href="mailto:whoaukim+paplo@gmail.com?subject=Paplo 유료 라이센스 문의" 
                    className="flex items-center justify-center space-x-3 w-full py-4 px-6 bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 text-white rounded-xl hover:shadow-lg hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300"
                  >
                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                    </svg>
                    <span className="text-lg font-semibold">이메일로 문의하기 / Contact via Email</span>
-                   <span className="text-sm">(whoaukim@gmail.com)</span>
+                   <span className="text-sm">(whoaukim+paplo@gmail.com)</span>
                  </a>
                </div>
              </div>
@@ -1107,18 +1107,18 @@ export default function Home() {
                     </h3>
                     <div className="space-y-4">
                       <a 
-                        href="mailto:whoaukim@gmail.com" 
+                        href="mailto:whoaukim+paplo@gmail.com" 
                         className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors"
                       >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
-                        <span>이메일 / Email: whoaukim@gmail.com</span>
+                        <span>이메일 / Email: whoaukim+paplo@gmail.com</span>
                       </a>
 
                       {/* Report Button */}
                       <a 
-                        href="mailto:whoaukim@gmail.com?subject=[신고] Paplo 디자인 무단 도용 신고"
+                        href="mailto:whoaukim+paplo@gmail.com?subject=[신고] Paplo 디자인 무단 도용 신고"
                         className="flex items-center space-x-3 text-red-600 hover:text-red-700 transition-colors group"
                       >
                         <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
