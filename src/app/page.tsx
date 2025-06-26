@@ -141,6 +141,21 @@ export default function Home() {
             </p>
           </div>
 
+          {/* 실제 사용 예시 이미지 */}
+          <div className="mb-12 flex flex-col items-center">
+            <Image
+              src="/Screenshot_1.png"
+              alt="Paplo 구조 실사용 예시"
+              width={400}
+              height={500}
+              className="rounded-xl shadow-md mb-4"
+            />
+            <p className="text-gray-700 text-center text-base">
+              실제 사용 모습<br/>
+              <span className="text-sm text-gray-500">Real-world usage of Paplo structure</span>
+            </p>
+          </div>
+
           {/* Feature Cards - 통일성 있게 수정 */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Weight & Volume */}
@@ -204,6 +219,33 @@ export default function Home() {
                     <span className="font-semibold">확장 가능</span>
                     <span className="text-sm ml-2 text-gray-500">(Expandable)</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Comparison Section */}
+          <div className="mt-16 text-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-8">
+              혁신적인 구조 비교
+              <span className="block text-lg text-gray-600 mt-2">Innovative Structure Comparison</span>
+            </h3>
+            <div className="relative max-w-2xl mx-auto">
+              <Image
+                src="/compare.png"
+                alt="기존 제품과 Paplo 구조 비교"
+                width={800}
+                height={400}
+                className="rounded-xl shadow-lg"
+              />
+              <div className="mt-6 grid grid-cols-2 gap-4 text-center max-w-lg mx-auto">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">기존 구조</h4>
+                  <p className="text-gray-600">Conventional Structure</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">Paplo 구조</h4>
+                  <p className="text-gray-600">Paplo Structure</p>
                 </div>
               </div>
             </div>
