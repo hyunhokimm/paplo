@@ -162,8 +162,8 @@ export default function Home() {
             {/* Weight & Volume */}
             <div className="card p-8">
               <div className="icon-box">
-                <svg className="w-8 h-8 text-paplo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </div>
               <div className="space-y-6">
@@ -284,8 +284,10 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Paper Reduction */}
             <div className="card p-8 text-center">
-              <div className="icon-box mx-auto">
-                <span className="text-2xl">📊</span>
+              <div className="icon-box">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                </svg>
               </div>
               <div className="text-5xl font-bold text-paplo mb-4">67%</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">종이 사용량 절감</h3>
@@ -294,7 +296,7 @@ export default function Home() {
 
             {/* CO2 Reduction */}
             <div className="card p-8 text-center">
-              <div className="icon-box mx-auto">
+              <div className="icon-box">
                 <span className="text-2xl">🌱</span>
               </div>
               <div className="text-5xl font-bold text-paplo mb-4">25kg</div>
@@ -304,7 +306,7 @@ export default function Home() {
 
             {/* Recyclability */}
             <div className="card p-8 text-center">
-              <div className="icon-box mx-auto">
+              <div className="icon-box">
                 <span className="text-2xl">♻️</span>
               </div>
               <div className="text-5xl font-bold text-paplo mb-4">100%</div>
