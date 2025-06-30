@@ -734,8 +734,8 @@ export default function Home() {
                 {/* Download Buttons */}
                 <div className="space-y-4">
                   <a 
-                    href="/paplo_thomson" 
-                    download="paplo_thomson"
+                    href="/paplo_thomson.ai"
+                    download="paplo_thomson.ai"
                     className="flex items-center justify-center space-x-3 w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -744,7 +744,7 @@ export default function Home() {
                     <span>도면 다운로드 / Download Drawings</span>
                   </a>
                   <a 
-                    href="/used.docx" 
+                    href="/used.docx"
                     download="used.docx"
                     className="flex items-center justify-center space-x-3 w-full py-3 px-6 bg-white border-2 border-purple-600 text-purple-600 rounded-xl hover:shadow-lg hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300"
                   >
