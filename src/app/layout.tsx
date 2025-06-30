@@ -8,6 +8,18 @@ export const metadata: Metadata = {
   description: '접착제 없이 사용 가능한 혁신적인 친환경 포장 솔루션. 무게와 부피를 1/3로 줄이고, 환경을 생각하는 새로운 패러다임을 제시합니다.',
   keywords: ['친환경', '포장', '종이', '캐리어', '지속가능', '환경보호', '혁신', '컵홀더', 'eco-friendly', 'packaging'],
   manifest: '/manifest.json',
+  themeColor: '#ffffff',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    viewportFit: 'cover',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Paplo',
+  },
   openGraph: {
     title: 'Paplo - 덜어낸 종이, 더해진 가치',
     description: '접착제 없이 사용 가능한 혁신적인 친환경 포장 솔루션',
@@ -55,7 +67,9 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://paplo.netlify.app" />
-        <meta name="theme-color" content="#22c55e" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className="bg-white" suppressHydrationWarning>
         <ClientLayout>

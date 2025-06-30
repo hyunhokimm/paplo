@@ -19,6 +19,12 @@
     Access-Control-Allow-Headers = "X-Requested-With, Content-Type, Authorization"
 
 [[headers]]
+  for = "/drawings/*"
+  [headers.values]
+    Content-Type = "application/octet-stream"
+    Content-Disposition = "attachment"
+
+[[headers]]
   for = "/*.ai"
   [headers.values]
     Content-Type = "application/illustrator"
@@ -28,6 +34,12 @@
   for = "/*.docx"
   [headers.values]
     Content-Type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    Content-Disposition = "attachment"
+
+[[headers]]
+  for = "/drawings/*.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
     Content-Disposition = "attachment"
 
 # Forms 설정
