@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent, ChangeEvent } from 'react';
+import { useState, FormEvent } from 'react';
 
 export default function SuggestionForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -13,28 +13,31 @@ export default function SuggestionForm() {
 
     try {
       const form = e.currentTarget;
-      const data = new FormData(form);
       
       // Netlify Forms로 데이터 전송
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data as any).toString()
-      });
-
-      if (!response.ok) throw new Error('Failed to submit');
-
-      setStatus('success');
-      setMessage('제안해 주셔서 감사합니다! / Thank you for your suggestion!');
-      setSelectedFile('');
-      form.reset();
+      fetch("/", {
+        method: "POST",
+        body: new FormData(form),
+      })
+        .then(() => {
+          setStatus('success');
+          setMessage('제안해 주셔서 감사합니다! / Thank you for your suggestion!');
+          setSelectedFile('');
+          form.reset();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          setStatus('error');
+          setMessage('제출 중 오류가 발생했습니다. 다시 시도해 주세요. / An error occurred. Please try again.');
+        });
     } catch (error) {
+      console.error('Error:', error);
       setStatus('error');
       setMessage('제출 중 오류가 발생했습니다. 다시 시도해 주세요. / An error occurred. Please try again.');
     }
   };
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       if (file.size > 10 * 1024 * 1024) { // 10MB in bytes
@@ -67,10 +70,10 @@ export default function SuggestionForm() {
       <form
         name="suggestions"
         method="POST"
-        onSubmit={handleSubmit}
-        className="space-y-6"
         data-netlify="true"
         netlify-honeypot="bot-field"
+        onSubmit={handleSubmit}
+        className="space-y-6"
         encType="multipart/form-data"
       >
         {/* Netlify Forms 필수 필드 */}
