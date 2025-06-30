@@ -148,13 +148,10 @@ export default function Home() {
 
           {/* 실제 사용 예시 이미지 */}
           <div className="mb-12 flex flex-col items-center">
-            <Image
+            <img
               src="/Screenshot_1.png"
               alt="Paplo 구조 실사용 예시"
-              width={400}
-              height={500}
-              className="rounded-xl shadow-md mb-4"
-              style={{ width: 'auto', height: 'auto' }}
+              className="rounded-xl shadow-md mb-4 w-auto h-auto max-w-[400px]"
             />
             <p className="text-gray-700 text-center text-base">
               실제 사용 모습<br/>
@@ -232,14 +229,10 @@ export default function Home() {
               <span className="block text-lg text-gray-600 mt-2">Innovative Structure Comparison</span>
             </h3>
             <div className="relative max-w-2xl mx-auto">
-              <Image
+              <img
                 src="/compare.png"
                 alt="기존 제품과 Paplo 구조 비교"
-                width={800}
-                height={400}
-                className="rounded-xl shadow-lg"
-                priority
-                style={{ width: '100%', height: 'auto' }}
+                className="rounded-xl shadow-lg w-full h-auto"
               />
               <div className="mt-6 grid grid-cols-2 gap-4 text-center max-w-lg mx-auto">
                 <div>
@@ -600,14 +593,10 @@ export default function Home() {
                   </div>
                   <div className="flex justify-center mt-4">
                     <div className="bg-white p-4 rounded-xl shadow-sm">
-                      <Image 
-                        src="/kakaoQR.png" 
-                        alt="카카오페이 QR 코드" 
-                        width={160} 
-                        height={160} 
-                        className="mx-auto"
-                        priority
-                        style={{ width: 'auto', height: 'auto' }}
+                      <img
+                        src="/kakaoQR.png"
+                        alt="카카오페이 QR 코드"
+                        className="mx-auto w-[160px] h-[160px]"
                       />
                       <a 
                         href="https://qr.kakaopay.com/FNjGshihw"
@@ -644,13 +633,10 @@ export default function Home() {
                   <div className="flex justify-center mt-4">
                     <div className="bg-white p-4 rounded-xl shadow-sm">
                       <div className="text-sm text-gray-600 mb-2">Scan QR Code to Support</div>
-                      <Image 
-                        src="/buyme.png" 
-                        alt="Buy Me a Coffee QR Code" 
-                        width={180} 
-                        height={180} 
-                        className="mx-auto"
-                        priority
+                      <img
+                        src="/buyme.png"
+                        alt="Buy Me a Coffee QR Code"
+                        className="mx-auto w-[180px] h-[180px]"
                       />
                       <a 
                         href="https://www.buymeacoffee.com/whoaukim"
