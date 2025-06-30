@@ -200,7 +200,7 @@ export default function Home() {
                   </div>
                 </FadeIn>
 
-                {/* Innovation Feature */}
+                {/* Expandability Feature */}
                 <FadeIn>
                   <div className="card p-6 text-center">
                     <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
@@ -209,7 +209,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <h3 className="text-xl font-semibold mb-2">
-                      혁신의 핵심/Innovation Core
+                      확장성
                     </h3>
                     <ul className="text-gray-600 list-none">
                       <li>접착제 사용 없이도 용기에 손쉽게 결합되는 방식</li>
@@ -491,13 +491,13 @@ export default function Home() {
                     <span className="text-white font-bold">4</span>
                   </div>
                   <div>
-                    <p className="text-gray-800">4개까지 연결 가능 (측면 귀 부분 사용)</p>
-                    <p className="text-gray-500">For multiple cups, connect carriers using side flaps</p>
+                    <p className="text-gray-800">측면 연결 구조로 최대 4개까지 안전하게 연결 가능</p>
+                    <p className="text-gray-500">Safe connection up to 4 units with side connection structure</p>
                   </div>
                 </div>
 
                 {/* Usage Tips */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="mt-8 bg-gray-50 p-6 rounded-xl">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                       <span className="text-white font-bold">!</span>
@@ -519,6 +519,13 @@ export default function Home() {
                       <div>
                         <p className="text-gray-800">연결 시 측면 귀 부분을 확실히 끼워주세요</p>
                         <p className="text-gray-500">Make sure to securely insert the side flaps when connecting</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2"></span>
+                      <div>
+                        <p className="text-gray-800">4개 이상 연결하지 마세요 - 안전을 위해 최대 4개까지만 연결 가능합니다</p>
+                        <p className="text-gray-500">Do not connect more than 4 units - maximum 4 units for safety</p>
                       </div>
                     </div>
                   </div>
