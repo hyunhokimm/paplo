@@ -3,6 +3,7 @@
 import Image from "next/image";
 import SuggestionForm from './components/SuggestionForm';
 import { useState } from 'react';
+import AnimatedSection, { FadeIn, FadeInStagger } from './components/AnimatedSection';
 
 interface FaqItem {
   question: string;
@@ -68,14 +69,14 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center section ">
+      <AnimatedSection className="relative min-h-screen flex items-center section">
         {/* Background Effects - 더 부드럽게 수정 */}
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50"></div>
         
         <div className="relative container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {/* Logo & Tagline - 더 깔끔하게 */}
-            <div className="text-center mb-16">
+            <FadeIn className="text-center mb-16">
               <h1 className="text-7xl font-bold mb-8 header-gradient">
                 Paplo
               </h1>
@@ -87,12 +88,12 @@ export default function Home() {
                   Less Paper, More Value.
                 </p>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Message Card - 미니멀하게 수정 */}
-            <div className="card p-10 backdrop-blur-sm">
+            <FadeIn className="card p-10 backdrop-blur-sm">
               <div className="space-y-6 text-center">
-                <p className="text-lg text-gray-800 ">
+                <p className="text-lg text-gray-800">
                   안녕하세요! 한국에서 만든 친환경 포장 솔루션 Paplo의 김현호입니다.<br/>
                   저희가 만든 작은 혁신을 여러분과 함께 나누고 싶습니다.<br/>
                   현재 이 디자인은 무료로 사용 가능합니다.<br/>
@@ -108,10 +109,10 @@ export default function Home() {
                   Thank you.
                 </p>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Scroll Down Arrow - 여백 추가 */}
-            <div className="mt-12 mb-8 flex justify-center">
+            <FadeIn className="mt-12 mb-8 flex justify-center">
               <div className="animate-bounce">
                 <svg
                   className="w-6 h-6 text-indigo-500"
@@ -125,10 +126,10 @@ export default function Home() {
                   <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Product Features Section */}
       <section id="features" className="section">
@@ -136,6 +137,9 @@ export default function Home() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="section-title">주요 특징</h2>
+            <h2 className="section-subtitle">Key Features</h2>
+            <br />
+
             <p className="section-subtitle">
               혁신적인 구조로 만들어낸 친환경 포장 솔루션<br/>
               <span className="text-gray-500">Eco-friendly Packaging Solution with Innovative Structure</span>
@@ -150,6 +154,7 @@ export default function Home() {
               width={400}
               height={500}
               className="rounded-xl shadow-md mb-4"
+              style={{ width: 'auto', height: 'auto' }}
             />
             <p className="text-gray-700 text-center text-base">
               실제 사용 모습<br/>
@@ -158,89 +163,67 @@ export default function Home() {
           </div>
 
           {/* Feature Cards - 통일성 있게 수정 */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {/* Weight & Volume */}
-            <div className="card p-8">
-              <div className="icon-box">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="heading-3">무게 1/3</h3>
-                  <p className="body-light">Weight Reduced by 2/3</p>
-                </div>
-                <div>
-                  <h3 className="heading-3">부피 1/3</h3>
-                  <p className="body-light">Volume Reduced by 2/3</p>
-                </div>
-              </div>
-            </div>
+          <FadeInStagger>
+            <div className="py-20 px-6">
+              <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Weight Feature */}
+                <FadeIn>
+                  <div className="card p-6 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      무게 1/3
+                    </h3>
+                    <p className="text-gray-600">
+                      Weight Reduced by 2/3
+                    </p>
+                  </div>
+                </FadeIn>
 
-            {/* Innovation Core */}
-            <div className="highlight-box">
-              <p className="heading-3 !mb-4">혁신의 핵심</p>
-              <ul className="space-y-4">
-                <li className="flex items-center space-x-4">
-                  <span className="text-2xl flex-shrink-0">💡</span>
-                  <div>
-                    <p className="body">접착제 사용 없이도 용기에 손쉽게 결합되는 방식</p>
-                    <p className="body-light text-sm">Easy assembly without adhesives</p>
+                {/* Volume Feature */}
+                <FadeIn>
+                  <div className="card p-6 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12V8a2 2 0 00-2-2h-2.343a1 1 0 01-.707-.293l-1.414-1.414A2 2 0 0012.172 4H8a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      부피 1/3
+                    </h3>
+                    <p className="text-gray-600">
+                      Volume Reduced by 2/3
+                    </p>
                   </div>
-                </li>
-                <li className="flex items-center space-x-4">
-                  <span className="text-2xl flex-shrink-0">🌱</span>
-                  <div>
-                    <p className="body">환경 보호 차원의 가치 창출</p>
-                    <p className="body-light text-sm">Creating value for environmental protection</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                </FadeIn>
 
-            {/* Eco-friendly */}
-            <div className="card p-8">
-              <div className="icon-box">
-                <span className="text-2xl">🌱</span>
-              </div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="heading-3">친환경</h3>
-                  <p className="body-light">접착제가 필요 없는 구조로 재활용이 용이합니다.</p>
-                  <p className="text-gray-500 text-sm mt-1">Easy to recycle with no glue required structure</p>
-                </div>
-                <div className="pt-4 border-t border-gray-100">
-                  <div className="flex items-center text-paplo">
-                    <span className="text-2xl font-bold mr-2">100%</span>
-                    <span className="font-semibold">재활용 가능</span>
-                    <span className="text-sm ml-2 text-gray-500">(Recyclable)</span>
+                {/* Innovation Feature */}
+                <FadeIn>
+                  <div className="card p-6 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">
+                      혁신의 핵심/Innovation Core
+                    </h3>
+                    <ul className="text-gray-600 list-none">
+                      <li>접착제 사용 없이도 용기에 손쉽게 결합되는 방식</li>
+                      <li>환경 보호 차원의 가치 창출</li>
+                    </ul>
+                    <ul className="text-gray-500 list-none text-sm mt-2">
+                      <li>Easy attachment to containers without adhesives</li>
+                      <li>Creating value through environmental protection</li>
+                    </ul>
                   </div>
-                </div>
+                </FadeIn>
               </div>
             </div>
-
-            {/* Expandable */}
-            <div className="card p-8">
-              <div className="icon-box">
-                <span className="text-2xl">📦</span>
-              </div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="heading-3">확장성</h3>
-                  <p className="body-light">측면 연결 구조로 최대 4개까지 안전하게 연결 가능</p>
-                  <p className="text-gray-500 text-sm mt-1">Safe connection up to 4 units with side connection structure</p>
-                </div>
-                <div className="pt-4 border-t border-gray-100">
-                  <div className="flex items-center text-paplo">
-                    <span className="text-2xl font-bold mr-2">4x</span>
-                    <span className="font-semibold">확장 가능</span>
-                    <span className="text-sm ml-2 text-gray-500">(Expandable)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </FadeInStagger>
 
           {/* Comparison Section */}
           <div className="mt-16 text-center">
@@ -255,15 +238,17 @@ export default function Home() {
                 width={800}
                 height={400}
                 className="rounded-xl shadow-lg"
+                priority
+                style={{ width: '100%', height: 'auto' }}
               />
               <div className="mt-6 grid grid-cols-2 gap-4 text-center max-w-lg mx-auto">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800">기존 구조</h4>
-                  <p className="text-gray-600">Conventional Structure</p>
-                </div>
-                <div>
                   <h4 className="text-lg font-semibold text-gray-800">Paplo 구조</h4>
                   <p className="text-gray-600">Paplo Structure</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800">기존 구조</h4>
+                  <p className="text-gray-600">Conventional Structure</p>
                 </div>
               </div>
             </div>
@@ -276,9 +261,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="section-title">환경 보호 효과</h2>
-            <p className="section-subtitle">
-              Making a Difference for Our Planet
-            </p>
+            <h2 className="section-subtitle">Environmental Protection Impact</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -291,7 +274,7 @@ export default function Home() {
               </div>
               <div className="text-5xl font-bold text-paplo mb-4">67%</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">종이 사용량 절감</h3>
-              <p className="text-gray-600">Paper Usage Reduction</p>
+              <p className="text-gray-500">Paper Usage Reduction</p>
             </div>
 
             {/* CO2 Reduction */}
@@ -300,8 +283,8 @@ export default function Home() {
                 <span className="text-2xl">🌱</span>
               </div>
               <div className="text-5xl font-bold text-paplo mb-4">25kg</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">CO2 배출 감소 / 월</h3>
-              <p className="text-gray-600">CO2 Reduction / Month</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">월간 CO2 배출 감소</h3>
+              <p className="text-gray-500">Monthly CO2 Reduction</p>
             </div>
 
             {/* Recyclability */}
@@ -311,7 +294,7 @@ export default function Home() {
               </div>
               <div className="text-5xl font-bold text-paplo mb-4">100%</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">재활용 가능</h3>
-              <p className="text-gray-600">Recyclable</p>
+              <p className="text-gray-500">Recyclable Materials</p>
             </div>
           </div>
 
@@ -321,30 +304,33 @@ export default function Home() {
               <div className="icon-box mx-auto">
                 <span className="text-2xl">🌳</span>
               </div>
-              <h3 className="text-3xl font-bold text-center text-paplo mb-8">
+              <h3 className="text-3xl font-bold text-center text-paplo mb-2">
                 연간 환경 기여 효과
               </h3>
+              <p className="text-xl text-center text-gray-500 mb-8">
+                Annual Environmental Contribution
+              </p>
               <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-paplo mb-2">1,000장</div>
-                  <div className="text-gray-600">사용 시</div>
-                  <div className="text-gray-400">Usage</div>
-
+                  <div className="text-gray-700">사용 시</div>
+                  <div className="text-gray-500">Per 1,000 Uses</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-paplo mb-2">1그루</div>
-                  <div className="text-gray-600">나무 절감</div>
-                  <div className="text-gray-400">Tree Savings</div>
+                  <div className="text-gray-700">나무 절감</div>
+                  <div className="text-gray-500">Tree Saved</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-paplo mb-2">300kg</div>
-                  <div className="text-gray-600">연간 CO2 절감</div>
-                  <div className="text-gray-400">Annual CO2 Savings</div>
+                  <div className="text-gray-700">연간 CO2 절감</div>
+                  <div className="text-gray-500">Annual CO2 Reduction</div>
                 </div>
               </div>
-              <p className="text-lg text-center text-white bg-paplo/90 p-4 rounded-xl">
-                Paper savings + No glue + Smaller volume = Better sustainability
-              </p>
+              <div className="text-lg text-center text-white bg-paplo/90 p-4 rounded-xl">
+                <p className="mb-2">종이 절감 + 접착제 제거 + 부피 감소 = 더 나은 지속가능성</p>
+                <p className="text-sm">Paper Savings + No Adhesives + Volume Reduction = Better Sustainability</p>
+              </div>
             </div>
           </div>
         </div>
@@ -436,9 +422,8 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-6">
           {/* Section Header */}
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
-              사용법
-            </h2>
+            <h2 className="section-title">사용법</h2>
+            <h2 className="section-subtitle">How to Use</h2>
             <p className="text-2xl text-gray-600 mb-2">간단한 4단계로 완성하는 친환경 포장재</p>
             <p className="text-xl text-gray-500">Complete in 4 Simple Steps</p>
           </div>
@@ -544,12 +529,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coffee Support / 커피챗 후원 */}
+      {/* Coffee Support Section */}
       <section id="coffee-support" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent text-center">
-            커피챗 후원 / Support the Creator
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="section-title">커피챗 후원</h2>
+            <h2 className="section-subtitle">Support with Coffee</h2>
+          </div>
           
           <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-2xl">
             <div className="flex items-center justify-center mb-6">
@@ -600,7 +586,7 @@ export default function Home() {
                     </a>
                     <div className="text-sm text-gray-600 bg-gray-50 px-4 py-2 rounded-lg">
                       <span className="text-[#FFE812]">●</span>
-                      모바일에서만 후원이 가능합니다
+                      카카오페이는 모바일에서만 후원이 가능합니다
                       <br />
                       <span className="text-xs text-gray-500">Mobile device required for KakaoPay donation</span>
                     </div>
@@ -688,9 +674,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 bg-clip-text text-transparent animate-gradient">
-              라이센스 모델
-            </h2>
+            <h2 className="section-title">라이센스 모델</h2>
+            <h2 className="section-subtitle">License Model</h2>
             <p className="text-2xl text-gray-600 mb-2">다양한 사용 목적에 맞는 유연한 라이센스 옵션</p>
             <p className="text-xl text-gray-500">Flexible License Options for Various Uses</p>
           </div>
@@ -756,9 +741,8 @@ export default function Home() {
                 {/* Download Buttons */}
                 <div className="space-y-4">
                   <a 
-                    href="https://drive.google.com/file/d/1ok3bPDOCLZR318gnHZ9ppSLvxfMz5N_o/view?usp=sharing" 
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/paplo_thomson" 
+                    download="paplo_thomson"
                     className="flex items-center justify-center space-x-3 w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -767,9 +751,8 @@ export default function Home() {
                     <span>도면 다운로드 / Download Drawings</span>
                   </a>
                   <a 
-                    href="https://docs.google.com/document/d/12eK1s-QMSlnM0DYZNKfzalJiHdcG2MYJvXGT7iLSjLE/edit?usp=sharing" 
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/used.docx" 
+                    download="used.docx"
                     className="flex items-center justify-center space-x-3 w-full py-3 px-6 bg-white border-2 border-purple-600 text-purple-600 rounded-xl hover:shadow-lg hover:shadow-purple-500/30 transform hover:scale-105 transition-all duration-300"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -927,16 +910,34 @@ export default function Home() {
                     <div className="card p-8">
                       <div className="flex items-start space-x-4">
                         <div className="icon-box-sm">
-                          <span className="text-xl">F</span>
+                          <span className="text-xl">S</span>
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
-                            <h3 className="font-bold text-gray-900">John Smith</h3>
-                            <span className="text-gray-500">Environmental Activist</span>
+                            <h3 className="font-bold text-gray-900">이민수</h3>
+                            <span className="text-gray-500">매장 관리자</span>
                           </div>
                           <div className="pl-4 border-l-2 border-paplo space-y-2">
-                            <p className="text-gray-700">"혁신적인 디자인과 환경 보호를 동시에 실현한 훌륭한 제품입니다."</p>
-                            <p className="text-gray-500 text-sm">"An excellent product that achieves both innovative design and environmental protection."</p>
+                            <p className="text-gray-700">"직원들이 사용하기 편하고, 고객들도 좋아해요. 특히 환경을 생각하는 젊은 고객층에서 반응이 좋습니다."</p>
+                            <p className="text-gray-500 text-sm">"It's easy for staff to use, and customers love it. Especially popular among young, environmentally conscious customers."</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="card p-8">
+                      <div className="flex items-start space-x-4">
+                        <div className="icon-box-sm">
+                          <span className="text-xl">P</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2 mb-2">
+                            <h3 className="font-bold text-gray-900">박서연</h3>
+                            <span className="text-gray-500">바리스타</span>
+                          </div>
+                          <div className="pl-4 border-l-2 border-paplo space-y-2">
+                            <p className="text-gray-700">"처음에는 적응하는데 시간이 좀 걸렸지만, 이제는 오히려 더 빠르고 편해요. 손님들도 신기해하시고요."</p>
+                            <p className="text-gray-500 text-sm">"It took some time to get used to at first, but now it's actually faster and more convenient. Customers find it interesting too."</p>
                           </div>
                         </div>
                       </div>
@@ -1208,3 +1209,4 @@ export default function Home() {
     </div>
   );
 }
+
