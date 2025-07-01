@@ -4,9 +4,9 @@ import ClientLayout from './components/ClientLayout';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://paplo.netlify.app'),
-  title: 'Paplo - 덜어낸 종이, 더해진 가치',
-  description: '접착제 없이 사용 가능한 혁신적인 친환경 포장 솔루션. 무게와 부피를 1/3로 줄이고, 환경을 생각하는 새로운 패러다임을 제시합니다.',
-  keywords: ['친환경', '포장', '종이', '캐리어', '지속가능', '환경보호', '혁신', '컵홀더', 'eco-friendly', 'packaging'],
+  title: 'Paplo(파플로) - 덜어낸 종이, 더해진 가치',
+  description: '접착제 없이 사용 가능한 혁신적인 친환경 포장 솔루션. 파플로(Paplo)는 무게와 부피를 1/3로 줄이고, 환경을 생각하는 새로운 패러다임을 제시합니다. 페이플로, 페이퍼로 등으로도 알려진 친환경 종이 포장재입니다.',
+  keywords: ['파플로', '페이플로', '페이퍼로', 'Paplo', '친환경', '포장', '종이', '캐리어', '지속가능', '환경보호', '혁신', '컵홀더', '친환경포장', '종이포장', '테이크아웃', '배달포장', '일회용품', 'eco-friendly', 'packaging'],
   manifest: '/manifest.json',
   themeColor: '#ffffff',
   viewport: {
@@ -70,6 +70,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="naver-site-verification" content="ddfbead3671b64c4326fc5bf19fa4e1dd15b36d8" />
       </head>
       <body className="bg-white" suppressHydrationWarning>
         <ClientLayout>
